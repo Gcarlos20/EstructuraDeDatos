@@ -22,6 +22,27 @@ public class ejercicio2 {
         int arreglo2[] = new int[10];
         System.arraycopy(arreglo, 0, arreglo2, 0, arreglo.length);
         mostrarArreglo(arreglo2);
+        // [para comparar dos arreglos]
+
+        if (Arrays.equals(arreglo, arreglo2)){
+            JOptionPane.showMessageDialog(null, "Los arreglos son iguales");
+        } else {
+            JOptionPane.showMessageDialog(null, "Los arreglos son diferentes");
+        }
+
+        // [para ordenar un arreglo]
+        Arrays.sort(arreglo);
+        mostrarArreglo(arreglo);
+        
+        // binarySearch para buscar un elemento en un arreglo ordenado
+        int indice = Arrays.binarySearch(arreglo, 2);
+        if (indice >= 0) {
+            JOptionPane.showMessageDialog(null, "El elemento 2 se encuentra en el índice: " + indice);
+        } else {
+            JOptionPane.showMessageDialog(null, "El elemento 2 no se encuentra en el arreglo");
+        }
+
+
     }
     public static void mostrarArreglo(int[] arreglo) {
         String mensaje = "Contenido del arreglo: ";
