@@ -41,8 +41,22 @@ public class ejercicio2 {
         } else {
             JOptionPane.showMessageDialog(null, "El elemento 2 no se encuentra en el arreglo");
         }
-
-
+        
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" );
+        // bynarySearch para  nombres
+        String[] Nombres = new String[5];
+        Nombres[0] = "Juan";
+        Nombres[1] = "Pedro";
+        Nombres[2] = "Maria";
+        Nombres[3] = "Ana";
+        Nombres[4] = "Luis";
+      int indice2 = Arrays.binarySearch(Nombres, "Maria");
+        if (indice2 >= 0) {
+            JOptionPane.showMessageDialog(null, "El nombre Maria se encuentra en el índice: " + indice2);
+        } else {
+            JOptionPane.showMessageDialog(null, "El nombre Maria no se encuentra en el arreglo");
+        }
+        mostrarArregloLetra(Nombres);
     }
     public static void mostrarArreglo(int[] arreglo) {
         String mensaje = "Contenido del arreglo: ";
@@ -52,4 +66,15 @@ public class ejercicio2 {
         JOptionPane.showMessageDialog(null, mensaje);
     }
     
+
+/// Arreglo para imprimir nnombres 
+    public static void mostrarArregloLetra(String[] arreglo){
+        String mensaje = "Contenido del arreglo: ";
+        for (int i = 0; i < arreglo.length; i++) {
+            mensaje += arreglo[i] + " ";
+        }
+        JOptionPane.showMessageDialog(null, mensaje);
+    }
+
 }
+
